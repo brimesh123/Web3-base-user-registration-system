@@ -18,6 +18,18 @@ This project is a simple Web3-based user registration system built using HTML, J
 - **MetaMask**: A crypto wallet and gateway to blockchain apps. Get MetaMask [here](https://metamask.io/).
 - **Web3.js**: The Web3 JavaScript library for interacting with the Ethereum blockchain.
 
+## Steps to Run
+
+- **1**: Npm install
+- **2**: npm install -g truffle
+- **3**: npm install web3
+- **4**: Open ganache. 
+- **5**: go to code and open cmd Type : truffle compile && truffle migrate
+- **6**: once migration done copy "EmployeeRegistration.json" file to src/abis folder now give cmd "npm start"
+- **7**: Open ganache.
+
+
+
 ## Installation
 
 1. **Clone the Repository:**
