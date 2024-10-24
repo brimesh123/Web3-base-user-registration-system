@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Employee Registration System - Connect Wallet</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            --background: #0F172A;
+            --surface: rgba(30, 41, 59, 0.7);
+            --primary: #8B5CF6;
+            --secondary: #10B981;
+            --text: #F1F5F9;
+            --text-secondary: #CBD5E1;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.15) 0%, transparent 30%);
+            background-size: 100% 100%;
+            background-position: center;
+        }
+
+        #landingPage {
+            text-align: center;
+            padding: 4rem;
+            background: var(--surface);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 550px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        #connectWalletButton {
+            background-color: var(--primary);
+            color: var(--text);
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        #connectWalletButton:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        #connectWalletButton img {
+            width: 24px;
+            margin-right: 12px;
+        }
+
+        @media (max-width: 768px) {
+            #landingPage {
+                padding: 3rem;
+            }
+
+            h1 {
+                font-size: 2.3rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            #connectWalletButton {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="landingPage">
+        <h1>Web3 Employee Registration</h1>
+        <p>Step into the future of employee management. Connect your wallet to unlock our decentralized system and revolutionize your workforce.</p>
+        <button id="connectWalletButton">
+            <img src="https://cdn.iconscout.com/icon/free/png-512/free-metamask-logo-icon-download-in-svg-png-gif-file-formats--browser-extension-chrome-logos-icons-2261817.png?f=webp&w=256" alt="Wallet Icon" />
+            Connect Wallet
+        </button>
+    </div>
+
+    <!-- Include web3.js -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/truffle-contract@4.0.31/dist/truffle-contract.min.js"></script>
+
+    <!-- Include app.js -->
+    <script src="app.js"></script>
+
+    <script>
+        document.getElementById('connectWalletButton').addEventListener('click', function() {
+            console.log('Connecting wallet...');
+        });
+    </script>
+</body>
+</html>
